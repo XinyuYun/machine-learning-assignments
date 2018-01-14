@@ -84,9 +84,6 @@ Theta1_grad_temp = Theta1_grad_temp + (delta2'*a1);
 Theta2_grad_temp = Theta2_grad_temp + (delta3'*a2);
 Theta1_grad = 1/m.*Theta1_grad_temp;
 Theta2_grad = 1/m.*Theta2_grad_temp;
-fprintf('size of theta1_grad is %d \n', size(Theta1_grad));
-fprintf('size of theta2_grad is %d \n', size(Theta2_grad));
-
  
 % Part 3: Implement regularization with the cost function and gradients.
 %
@@ -121,11 +118,8 @@ J = J + lambda/(2*m).*(sum(sum(Theta1(:,2:end).^2))+sum(sum(Theta2(:,2:end).^2))
 % Unroll gradients
 grad = [Theta1_grad(:) ; Theta2_grad(:)];
 %regularized 
-% Theta1_reg = [zeros(size(Theta1,1),1) Theta1(:,2:end)];
-% Theta2_reg = [zeros(size(Theta2,1),1) Theta2(:,2:end)];
-% Theta1_grad = Theta1_grad + lambda/m.*Theta1_reg;
-% Theta2_grad = Theta2_reg  + lambda/m.*Theta2_reg;
-% grad = [Theta1_grad(:) ; Theta2_grad(:)];
+Theta1_reg =[zeros()] Theta1;
+Theta1_reg
 
 
 end
