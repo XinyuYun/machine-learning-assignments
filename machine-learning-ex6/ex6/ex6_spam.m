@@ -42,7 +42,7 @@ pause;
 
 %% ==================== Part 2: Feature Extraction ====================
 %  Now, you will convert each email into a vector of features in R^n. 
-%  You should complete the code in emailFeatures.m to produce a feature
+%  You should complete the costatude in emailFeatures.m to produce a feature
 %  vector for a given email.
 
 fprintf('\nExtracting features from sample email (emailSample1.txt)\n');

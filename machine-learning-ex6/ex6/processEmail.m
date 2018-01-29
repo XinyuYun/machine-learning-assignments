@@ -97,7 +97,15 @@ while ~isempty(email_contents)
     %       str2). It will return 1 only if the two strings are equivalent.
     %
 
-
+    wordList = split(str, " ");
+    for word_index = 1 : length(wordList)
+        for vocal_index = 1: length(vocabList)
+            if(strcmp(wordList(word_index), vocabList{vocal_index}))
+                word_indices = [word_indices vocal_index]
+            end
+        end
+    end
+        
 
 
 
